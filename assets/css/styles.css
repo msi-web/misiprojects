@@ -187,6 +187,17 @@ section {
   letter-spacing: 0.3px;
 }
 
+.specialty-box {
+  background-color: var(--color-surface);
+  border-left: 4px solid var(--color-accent);
+  padding: 1.2rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  letter-spacing: 0.4px;
+}
+
 /* Hero Image */
 
 .hero-image {
