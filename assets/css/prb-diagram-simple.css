@@ -1,0 +1,175 @@
+/* ========== SIMPLE FLEXBOX DIAGRAM ========== */
+
+.diagram-images-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.diagram-intro {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+
+/* ========== DESKTOP LAYOUT (above 768px) ========== */
+
+.images-flexbox {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.connector-lines-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 35px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.image-label-pair {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.diagram-node-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, filter 0.25s ease;
+  cursor: pointer;
+}
+
+.diagram-node-image:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 12px rgba(212, 165, 116, 0.6));
+}
+
+.node-label {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--color-text);
+  max-width: 120px;
+}
+
+/* ========== MOBILE LAYOUT (768px and below) ========== */
+
+@media (max-width: 768px) {
+  .images-flexbox {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .connector-lines-svg {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-label-pair {
+    position: relative;
+    gap: 12px;
+    padding: 1.5rem 0;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-label-pair:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -1.5rem;
+    width: 3px;
+    height: 1.5rem;
+    background-color: #D4A574;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .diagram-node-image {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.25s ease, filter 0.25s ease;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .diagram-node-image:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 10px rgba(212, 165, 116, 0.6));
+  }
+}
+
+@media (max-width: 768px) {
+  .node-label {
+    max-width: 140px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .diagram-intro {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-label-pair {
+    padding: 1.25rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-label-pair:not(:last-child)::before {
+    height: 1.25rem;
+    bottom: -1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .diagram-node-image {
+    width: 65px;
+    height: 65px;
+    transition: transform 0.25s ease, filter 0.25s ease;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 480px) {
+  .diagram-node-image:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 10px rgba(212, 165, 116, 0.6));
+  }
+}
+
+@media (max-width: 480px) {
+  .node-label {
+    max-width: 130px;
+    font-size: 0.85rem;
+  }
+}
+

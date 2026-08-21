@@ -1,0 +1,192 @@
+/* ========== CIRCULAR DIAGRAM STYLES ========== */
+
+.circular-diagram {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.diagram-intro {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+
+/* ========== DESKTOP/TABLET LAYOUT - CIRCULAR RING (above 768px) ========== */
+
+.diagram-ring-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diagram-ring-svg {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+}
+
+/* SVG polygon and text styling for the pentagon */
+
+.diagram-ring-svg line {
+  stroke: #D4A574;
+  stroke-width: 4;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 4px rgba(212, 165, 116, 0.5));
+}
+
+.diagram-ring-svg circle {
+  fill: #D4A574;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.diagram-ring-svg circle:hover {
+  fill: #E8C48A;
+  filter: drop-shadow(0 4px 12px rgba(212, 165, 116, 0.5));
+}
+
+.diagram-ring-svg text {
+  pointer-events: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Hide the mobile list version on desktop/tablet */
+
+.diagram-nodes-mobile {
+  display: none;
+}
+
+/* ========== MOBILE LAYOUT - VERTICAL STACK (768px and below) ========== */
+
+@media (max-width: 768px) {
+  .diagram-ring-container {
+    position: static;
+    aspect-ratio: auto;
+    max-width: 100%;
+    display: block;
+    width: 100%;
+    padding: 0 1.5rem 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .diagram-ring-svg {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .diagram-nodes-mobile {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .diagram-node {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 2rem;
+    margin-left: -1.5rem;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .node-circle {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .node-label {
+    font-size: 1rem;
+    max-width: none;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .diagram-node:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: -3px;
+    top: 100%;
+    width: 3px;
+    height: 1.5rem;
+    background-color: var(--color-accent);
+  }
+}
+
+/* Loop back indicator at the bottom */
+
+@media (max-width: 768px) {
+  .diagram-nodes::after {
+    content: '↻';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-left: -1.5rem;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 50%;
+    padding: 0;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .diagram-intro {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .diagram-node {
+    gap: 1rem;
+    padding: 1.25rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .node-circle {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .node-label {
+    font-size: 0.9rem;
+  }
+}
+
