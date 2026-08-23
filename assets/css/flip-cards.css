@@ -1,0 +1,143 @@
+/* ========== FLIP CARD STYLES ========== */
+
+.flip-card-row {
+  margin-bottom: 1.5rem;
+}
+
+.flip-card-wrapper {
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: var(--color-surface);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.flip-card-front {
+  text-align: center;
+  color: var(--color-text);
+}
+
+.flip-card-back {
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  text-align: left;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.flip-card-wrapper.flipped .flip-card-front {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.flip-card-wrapper.flipped .flip-card-back {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.flip-card-label {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.flip-card-section {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+}
+
+.flip-card-hint {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.flip-card-content {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.flip-card-content ol {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.flip-card-content ol li {
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.flip-card-callout {
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1rem;
+}
+
+/* Responsive adjustments for smaller screens */
+
+@media (max-width: 768px) {
+  .flip-card-front, .flip-card-back {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .flip-card-label {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .flip-card-content {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .flip-card-front, .flip-card-back {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .flip-card-label {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .flip-card-section {
+    font-size: 0.95rem;
+  }
+}
+
