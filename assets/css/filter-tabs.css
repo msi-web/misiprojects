@@ -1,0 +1,70 @@
+/* ========== FILTER TABS STYLING ========== */
+
+.filter-tabs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+}
+
+.filter-tab:hover {
+  background-color: var(--color-surface-dark);
+  color: var(--color-text);
+}
+
+.filter-tab.active {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  border-color: var(--color-accent);
+}
+
+.filter-tab.active:hover {
+  background-color: #E8C48A;
+  color: var(--color-bg);
+}
+
+/* Hide/show helper for category filtering */
+
+.project-card-hidden {
+  display: none !important;
+}
+
+/* Mobile responsive: hide long label and show short label */
+
+@media (max-width: 480px) {
+  .filter-label-long {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-label-short {
+    display: inline;
+  }
+}
+
+@media (min-width: 481px) {
+  .filter-label-short {
+    display: none;
+  }
+}
+

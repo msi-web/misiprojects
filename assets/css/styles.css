@@ -558,6 +558,62 @@ section {
   font-weight: 700;
 }
 
+/* ========== EDUCATION SECTION ========== */
+
+.education-section {
+  position: relative;
+  padding: 0;
+  margin-top: 3rem;
+}
+
+.education-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color-accent);
+  transform: translateX(calc(50% - 1px));
+}
+
+@media (max-width: 768px) {
+  .education-section::before {
+    left: 15px;
+    transform: none;
+  }
+}
+
+.education-section .experience-card {
+  margin-left: 3rem;
+  position: relative;
+}
+
+.education-section .experience-card::before {
+  content: '';
+  position: absolute;
+  left: -2.5rem;
+  top: 2rem;
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  border: 3px solid var(--color-bg);
+}
+
+@media (max-width: 768px) {
+  .education-section .experience-card {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .education-section .experience-card::before {
+    left: -2.5rem;
+    display: none;
+  }
+}
+
 /* ========== MY WORK SECTION ========== */
 
 .section-work {
@@ -769,6 +825,20 @@ section {
   .contact-card-text {
     font-size: 1rem;
   }
+}
+
+/* ========== PROCESS IMPROVEMENT PAGE SECTIONS ========== */
+
+.section-approach {
+  background-color: var(--color-bg-secondary);
+}
+
+.section-findings {
+  background-color: var(--color-bg-secondary);
+}
+
+.section-outcome {
+  background-color: var(--color-bg);
 }
 
 /* ========== FOOTER ========== */
