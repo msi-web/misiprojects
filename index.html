@@ -10,6 +10,12 @@
     <meta name="robots" content="noindex, nofollow">
     <meta name="robots" content="noindex, nofollow">
     <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="noindex, nofollow">
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -23,11 +29,14 @@
     <link rel="stylesheet" href="assets/css/prb-diagram-simple.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/prb-diagram-pentagon.css">
+    <link rel="stylesheet" href="assets/css/process-flow-diagram.css">
     <link rel="stylesheet" href="assets/css/sample-dashboard-project.css">
+    <link rel="stylesheet" href="assets/css/filter-tabs.css">
     <link rel="stylesheet" href="assets/css/work-event-detail.css">
     <link rel="stylesheet" href="assets/css/flip-cards.css">
     <link rel="stylesheet" href="assets/css/prb-circular-diagram.css">
     <link rel="stylesheet" href="assets/css/procedure-accordion.css">
+    <link rel="stylesheet" href="assets/css/process-improvement-diagram.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 <meta name="robots" content="noindex, nofollow">
 <script data-goatcounter="https://sorrow2222.goatcounter.com/count"
@@ -157,13 +166,29 @@
                     </ul>
                 </div>
             </div>
+            <h2 class="mt-5 section-title">Education</h2>
+            <div class="education-section">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Associate Degree, Business Administration</h3><span class="experience-company">Colorado Technical University</span>
+                    </div>
+                    <p class="experience-date">2020 – 2022</p>
+                    <ul class="experience-highlights">
+                        <li>Graduated with Honors, GPA 4.0</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
     <section id="work" class="section-work">
         <div class="container-lg">
             <h2 class="mb-5 section-title">My Work</h2>
+            <div class="mb-3 filter-instruction-box" style="background-color:#f8f9fa;border-left:4px solid #0d6efd;padding:12px 16px;border-radius:4px;margin-bottom:20px;">
+                <p style="margin:0;color:#666;font-size:14px;"><small><strong>Tip:</strong> Click a topic to filter what you see below</small></p>
+            </div>
+            <div class="mb-5 filter-tabs"><button class="active filter-tab" data-filter="governance"><span class="filter-label-long">Policy &amp; Process Governance</span><span class="filter-label-short">Governance</span></button><button class="filter-tab" data-filter="process-improvement">Process Improvement</button><button class="filter-tab" data-filter="all">All</button></div>
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" data-category="governance">
                     <div class="project-card sample-work-card"><span class="sample-badge">Strategy</span>
                         <div class="project-image-placeholder"><span></span><img class="img-fluid" width="1200" height="672" src="assets/img/Dashboards%20-%20Sample/PRB_Pillars_Logo.png"></div>
                         <div class="project-content">
@@ -173,7 +198,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" data-category="governance">
                     <div class="project-card sample-work-card"><span class="sample-badge">Strategy</span>
                         <div class="project-image-placeholder"><span></span><img class="img-fluid" width="1200" height="672" src="assets/img/Dashboards%20-%20Sample/TransformationLogo.png"></div>
                         <div class="project-content">
@@ -183,7 +208,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" data-category="governance">
                     <div class="project-card sample-work-card"><span class="sample-badge">Strategy</span>
                         <div class="project-image-placeholder"><span></span><img class="img-fluid" width="1200" height="672" src="assets/img/ProcedureSample_Logo.png"></div>
                         <div class="project-content">
@@ -193,7 +218,37 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" data-category="process-improvement">
+                    <div class="project-card sample-work-card"><span class="sample-badge">Strategy</span>
+                        <div class="project-image-placeholder"><span></span><img class="img-fluid" width="1200" height="672" src="assets/img/ProcessImprv_logo.png"></div>
+                        <div class="project-content">
+                            <div class="sample-work-label"><span style="font-size:22px;"><span style="font-weight:normal;">Process Improvement Strategy</span></span></div>
+                            <h3 class="project-title">Finding the Real Problem Before Fixing It</h3>
+                            <p class="project-description">My approach to process improvement, finding what is actually broken before trying to fix it.</p><a class="btn btn-sm btn-accent" role="button" href="Process_Improvement.html">View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-category="process-improvement">
+                    <div class="project-card sample-work-card"><span class="sample-badge">REAL WORK</span>
+                        <div class="project-image-placeholder"><span></span><img class="img-fluid" width="1200" height="672" src="assets/img/UntangleLogo.png"></div>
+                        <div class="project-content">
+                            <div class="sample-work-label"><span style="font-size:22px;"><span style="font-weight:normal;">UScellular Experience</span></span></div>
+                            <h3 class="project-title">Untangling a Policy Nobody Wanted to Touch</h3>
+                            <p class="project-description">Partnered with Legal, HR, and Operations to rebuild an outdated, unclear policy for handling deceased customer accounts.</p><a class="btn btn-sm btn-accent" role="button" href="Untangling_a_Policy.html">View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-category="process-improvement">
+                    <div class="project-card sample-work-card"><span class="sample-badge">Real work</span>
+                        <div class="project-image-placeholder"><span></span><img class="img-fluid" width="1200" height="672" src="assets/img/75CentLogo.png"></div>
+                        <div class="project-content">
+                            <div class="sample-work-label"><span style="font-size:22px;">UScellular Experience</span></div>
+                            <h3 class="project-title">The Three-Cent Problem Nobody Would Own</h3>
+                            <p class="project-description">Tracked down a three-cent billing quirk nobody owned, and fixed it for $18,000 in annual savings.</p><a class="btn btn-sm btn-accent" role="button" href="Three_Cent_Problem.html">View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-category="governance">
                     <div class="project-card sample-work-card"><span class="sample-badge">Real Work</span>
                         <div class="project-image-placeholder"><img class="img-fluid" width="1200" height="672" src="assets/img/Dashboards%20-%20Sample/PRB%20Index%20Logo.png"><span></span></div>
                         <div class="project-content">
@@ -203,7 +258,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" data-category="governance">
                     <div class="project-card sample-work-card"><span class="sample-badge">Real Work</span>
                         <div class="project-image-placeholder"><img class="img-fluid" width="1200" height="672" src="assets/img/ADP_Logo.png"><span></span></div>
                         <div class="project-content">
@@ -213,7 +268,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" data-category="governance">
                     <div class="project-card sample-work-card"><span class="sample-badge">Real Work</span>
                         <div class="project-image-placeholder"><span><img class="img-fluid" width="1200" height="672" src="assets/img/Fraud%20&%20Adjustment%20Visibility%20Logo.png"></span></div>
                         <div class="project-content">
@@ -263,10 +318,14 @@
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/prb-pentagon-diagram.js"></script>
+    <script src="assets/js/process-flow-diagram-connectors.js"></script>
     <script src="assets/js/sample-dashboard-project.js"></script>
+    <script src="assets/js/filter-tabs.js"></script>
     <script src="assets/js/flip-cards.js"></script>
     <script src="assets/js/prb-connector-lines.js"></script>
     <script src="assets/js/procedure-accordion.js"></script>
+    <script src="assets/js/process-connector-lines.js"></script>
+    <script src="assets/js/process-diagram-connectors.js"></script>
 </body>
 
 </html>
